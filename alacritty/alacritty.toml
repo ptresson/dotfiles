@@ -1,0 +1,40 @@
+[window]
+decorations="None"
+opacity=0.9
+startup_mode="Maximized"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;2u"
+key = "Return"
+mods = "Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;5u"
+key = "Return"
+mods = "Control"
+
+#[colors.primary]
+#background = '0x121212'
+## background = '0x2D2A2E'
+#foreground = '0xebdbb2'
+#
+#[colors.normal]
+#black =   '0x2c2525'
+#red =     '0xfd6883'
+#green =   '0x10aa58'
+#yellow =  '0xf9cc6c'
+#blue =    '0xf38d70'
+#magenta = '0xa8a9eb'
+#cyan =    '0x85dacc'
+#white =   '0xa89984'
+##white =   '0xfff1f3'
+#
+#[colors.bright]
+#black =   '0x72696a'
+#red =     '0xfd6883'
+#green =   '0xadda78'
+#yellow =  '0xf9cc6c'
+#blue =    '0xf38d70'
+#magenta = '0xa8a9eb'
+#cyan =    '0x85dacc'
+#white =   '0xfff1f3'
