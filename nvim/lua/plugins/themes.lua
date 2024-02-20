@@ -7,10 +7,10 @@ return {
     opts = {
       options = {
         transparent = true,
-        styles = {
-          sidebars = "transparent",
-          floats = "transparent",
-        },
+        -- styles = {
+        --   sidebars = "transparent",
+        --   floats = "transparent",
+        -- },
       },
     },
   },

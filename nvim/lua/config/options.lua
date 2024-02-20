@@ -1,3 +1,11 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
+require("lazyvim.util").toggle.diagnostics()
+-- require("lazyvim.util").toggle.inlay_hints()
+-- return {
+--   g = {
+--     ui_notifications_enabled = false, -- disable notifications when toggling UI elements
+--     diagnostics_mode = 0, -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
+--   },
+-- }
