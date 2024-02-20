@@ -21,10 +21,11 @@ mods = "Control"
 ## background = '0x2D2A2E'
 #foreground = '0xebdbb2'
 #
-#[colors.normal]
+[colors.normal]
 #black =   '0x2c2525'
 #red =     '0xfd6883'
 #green =   '0x10aa58'
+green =   '0x81b29a'
 #yellow =  '0xf9cc6c'
 #blue =    '0xf38d70'
 #magenta = '0xa8a9eb'
