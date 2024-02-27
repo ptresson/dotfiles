@@ -5,4 +5,5 @@
 !.gitignore
 !alacritty/*
 !bash/*
+!nvim/*
 nvim/lazy-lock.json
