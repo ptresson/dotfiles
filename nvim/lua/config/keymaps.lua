@@ -39,17 +39,32 @@ vim.keymap.set("n", "<Tab>", ":bn<CR>", { desc = "next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":bp<CR>", { desc = "previous buffer" })
 vim.keymap.set("n", "<leader>d", ":bd<CR>", { desc = "detach buffer" })
 
+-- ranger
+vim.keymap.set("n", "<leader>e", function()
+  require("ranger-nvim").open(true)
+end, { desc = "Open Ranger" })
+
+-- telescope
+vim.keymap.set("n", "<leader>sr", function()
+  require("telescope.builtin").lsp_references()
+end, { desc = "Search References" })
+
 -- python keymaps
 vim.keymap.set({ "n", "v" }, "<leader>p", "yoprint(<esc>pa)<esc>k", { desc = "Print under current line" })
 vim.keymap.set({ "n", "v" }, "<leader>pp", "oprint('pouet')<esc>k", { desc = "Print 'pouet' under current line" })
 vim.keymap.set({ "n", "v" }, "<leader>s", "osys.exit(1)<esc>k", { desc = "Add sys exit under current line" })
 vim.keymap.set({ "n", "v" }, "<leader>pl", "yoprint(len(<Esc>pa))<Esc>", { desc = "Print length under current line" })
-vim.keymap.set({ "n", "v" }, "<leader>ps", "yiwoprint(<esc>pa.shape)<esc>", { desc = "print shape under current line" })
+vim.keymap.set({ "n", "v" }, "<leader>ps", "yiwoprint(<esc>pa.shape)<esc>", { desc = "Print shape under current line" })
 
 vim.keymap.set("n", "<F9>", ":w <CR>:lua execute_python()<CR>")
 vim.keymap.set("n", "<C-CR>", ":w <CR>:lua execute_python()<CR>")
 -- extra backward slashes add to avoid escape sequences in lua
-vim.keymap.set("n", "<leader>(", ":s/\\((\\zs\\|, *\\zs\\|)\\)/\\r&/g|:'[,']normal ==<CR>")
+vim.keymap.set(
+  "n",
+  "<leader>(",
+  ":s/\\((\\zs\\|, *\\zs\\|)\\)/\\r&/g|:'[,']normal ==<CR>",
+  { desc = "Format inside parentheses" }
+)
 
 -- Create a key mapping to find and jump to __main__
 vim.keymap.set("n", "<leader>m", "/__main__<CR>")
