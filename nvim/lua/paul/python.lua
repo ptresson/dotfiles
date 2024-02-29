@@ -1,9 +1,9 @@
 -- shamelessly copied from https://github.com/alexghergh/nvim-tmux-navigation/
 
-local function tmux_command(command)
-    local tmux_socket = vim.fn.split(vim.env.TMUX, ',')[1]
-    return vim.fn.system("tmux -S " .. tmux_socket .. " " .. command)
-end
+-- local function tmux_command(command)
+--     local tmux_socket = vim.fn.split(vim.env.TMUX, ',')[1]
+--     return vim.fn.system("tmux -S " .. tmux_socket .. " " .. command)
+-- end
 
 -- this could work but there is a newline char 
 -- at the end of the returned strings:
@@ -12,25 +12,25 @@ end
 -- tmux_window = tmux_command("display-message -p -F '#{window_index}'")
 -- tmux_num_panes = tmux_command("display-message -p -F '#{window_panes}'")
 
-function execute_python()
+function ExecutePython()
 
-		session=vim.fn.system("echo -n $(tmux display-message -p '#S')")
-		window=vim.fn.system("echo -n $(tmux display-message -p -F '#{window_index}')")
-		num_panes=vim.fn.system("echo -n $(tmux display-message -p -F '#{window_panes}')")-1
-		pane_mode=vim.fn.system("echo -n $(tmux display-message -p -t \""..session..":".. window.."."..num_panes.."\" '#{pane_in_mode}')")
+		local session=vim.fn.system("echo -n $(tmux display-message -p '#S')")
+		local window=vim.fn.system("echo -n $(tmux display-message -p -F '#{window_index}')")
+		local num_panes=vim.fn.system("echo -n $(tmux display-message -p -F '#{window_panes}')")-1
+		local pane_mode=vim.fn.system("echo -n $(tmux display-message -p -t \""..session..":".. window.."."..num_panes.."\" '#{pane_in_mode}')")
 		if pane_mode == "1" then
-				clear_screen = "tmux send-keys -t \""..session..":".. window.."."..num_panes.."\" 'q' Enter"
+				local clear_screen = "tmux send-keys -t \""..session..":".. window.."."..num_panes.."\" 'q' Enter"
 				vim.fn.system(clear_screen)
 		end
 
-		filename = vim.fn.expand('%') 
-		command_call = "tmux send-keys -t \""..session..":".. window.."."..num_panes.."\" 'python '"..filename.." Enter"
+		local filename = vim.fn.expand('%')
+		local command_call = "tmux send-keys -t \""..session..":".. window.."."..num_panes.."\" 'python '"..filename.." Enter"
 		vim.fn.system(command_call)
 
 end
 
-vim.keymap.set("n","<F9>", ":w <CR>:lua execute_python()<CR>")
-vim.keymap.set("n","<ctrl-CR>", ":w <CR>:lua execute_python()<CR>")
+vim.keymap.set("n","<F9>", ":w <CR>:lua ExexutePython()<CR>")
+vim.keymap.set("n","<ctrl-CR>", ":w <CR>:lua ExecutePython()<CR>")
 
 vim.keymap.set("n","<leader>s", "osys.exit(1)<Esc>k")
 vim.keymap.set({"n", "v"},"<leader>P", "yiwoprint(<Esc>pa)<Esc>")
