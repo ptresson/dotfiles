@@ -23,6 +23,6 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.cursorline = true
 
-vim.api.nvim_set_hl(0, 'CursorLine', { bg='gray8'})
+-- vim.api.nvim_set_hl(0, 'CursorLine', { bg='gray8'})
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', {underline = false, undercurl = false})
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', {underline = false, undercurl = false})
