@@ -91,3 +91,18 @@ return {
         })
     end,
 }
+
+--[[
+pyright.json example
+
+{
+    "reportAttributeAccessIssue": false,
+    "reportOptionalMemberAccess": false,
+    "reportOptionalSubscript":false,
+    "reportArgumentType":false,
+    "reportPossiblyUnboundVariable":false,
+}
+
+--]]
+
+
