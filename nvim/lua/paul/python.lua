@@ -29,8 +29,8 @@ function ExecutePython()
 
 end
 
-vim.keymap.set("n","<F9>", ":w <CR>:lua ExexutePython()<CR>")
-vim.keymap.set("n","<ctrl-CR>", ":w <CR>:lua ExecutePython()<CR>")
+vim.keymap.set("n","<F9>", ":w <CR>:lua ExexutePython()<CR>",{silent=true})
+vim.keymap.set("n","<C-CR>", ":w <CR>:lua ExecutePython()<CR>",{silent=true})
 
 vim.keymap.set("n","<leader>s", "osys.exit(1)<Esc>k")
 vim.keymap.set({"n", "v"},"<leader>P", "yiwoprint(<Esc>pa)<Esc>")
