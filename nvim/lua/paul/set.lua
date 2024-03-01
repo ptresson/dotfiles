@@ -20,7 +20,9 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
-vim.keymap.set('n','<leader>E', vim.diagnostic.goto_prev)
-vim.keymap.set('n','<leader>e', vim.diagnostic.goto_next)
+
+vim.opt.cursorline = true
+
+vim.api.nvim_set_hl(0, 'CursorLine', { bg='gray8'})
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', {underline = false, undercurl = false})
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', {underline = false, undercurl = false})
