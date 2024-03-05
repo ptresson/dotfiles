@@ -25,12 +25,14 @@ function ExecutePython()
 
 		local filename = vim.fn.expand('%')
 		local command_call = "tmux send-keys -t \""..session..":".. window.."."..num_panes.."\" 'python '"..filename.." Enter"
+        vim.cmd(":w")
 		vim.fn.system(command_call)
 
 end
 
-vim.keymap.set("n","<F9>", ":w <CR>:lua ExexutePython()<CR>",{silent=true})
-vim.keymap.set("n","<C-CR>", ":w <CR>:lua ExecutePython()<CR>",{silent=true})
+vim.keymap.set("n","<F9>", ":lua ExecutePython()<CR>",{silent=true})
+vim.keymap.set("n","<C-CR>", ":lua ExecutePython()<CR>",{silent=true})
+vim.keymap.set("n","<leader><CR>", ":lua ExecutePython()<CR>",{silent=true})
 
 vim.keymap.set("n","<leader>s", "osys.exit(1)<Esc>k")
 vim.keymap.set({"n", "v"},"<leader>P", "yiwoprint(<Esc>pa)<Esc>")
