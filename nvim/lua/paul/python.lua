@@ -35,9 +35,14 @@ vim.keymap.set("n","<C-CR>", ":lua ExecutePython()<CR>",{silent=true})
 vim.keymap.set("n","<leader><CR>", ":lua ExecutePython()<CR>",{silent=true})
 
 vim.keymap.set("n","<leader>s", "osys.exit(1)<Esc>k")
-vim.keymap.set({"n", "v"},"<leader>P", "yiwoprint(<Esc>pa)<Esc>")
-vim.keymap.set({"n", "v"},"<leader>PL", "yiwoprint(len(<Esc>pa))<Esc>")
-vim.keymap.set({"n", "v"},"<leader>PS", "yiwoprint(<Esc>pa.shape)<Esc>")
+vim.keymap.set("n","<leader>P", "yiwoprint(<Esc>pa)<Esc>")
+vim.keymap.set("v","<leader>P", "yoprint(<Esc>pa)<Esc>")
+vim.keymap.set("n","<leader>PL", "yiwoprint(len(<Esc>pa))<Esc>")
+vim.keymap.set("v","<leader>PL", "yoprint(len(<Esc>pa))<Esc>")
+vim.keymap.set("n","<leader>PS", "yiwoprint(<Esc>pa.shape)<Esc>")
+vim.keymap.set("v","<leader>PS", "yoprint(<Esc>pa.shape)<Esc>")
+vim.keymap.set("n","<leader>PH", "yiwoprint(<Esc>pa.head())<Esc>")
+vim.keymap.set("v","<leader>PH", "yoprint(<Esc>pa.head())<Esc>")
 vim.keymap.set("n","<leader>pp", "oprint('pouet')<Esc>k")
 
 -- command to add newline after commas and autoindent
