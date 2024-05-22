@@ -1,0 +1,37 @@
+let mapleader = " "
+set mouse=a
+set clipboard=unnamedplus "unify clipboard
+set noswapfile
+set incsearch
+nnoremap <leader>h :nohlsearch<CR>
+nnoremap <CR> :
+nnoremap <tab> :bn
+nnoremap <leader>d :bd
+
+" Normal mode mappings
+nnoremap <leader>s osoys.exit(1)<Esc>k
+nnoremap <leader>P yiwoprint(<Esc>pa)<Esc>
+nnoremap <leader>PL yiwoprint(len(<Esc>pa))<Esc>
+nnoremap <leader>PS yiwoprint(<Esc>pa.shape)<Esc>
+nnoremap <leader>PH yiwoprint(<Esc>pa.head())<Esc>
+nnoremap <leader>pp oprint('pouet')<Esc>k
+nnoremap <leader>m /__main__<CR>
+
+" Visual mode mappings
+vnoremap <leader>P yoprint(<Esc>pa)<Esc>
+vnoremap <leader>PL yoprint(len(<Esc>pa))<Esc>
+vnoremap <leader>PS yoprint(<Esc>pa.shape)<Esc>
+vnoremap <leader>PH yoprint(<Esc>pa.head())<Esc>
+filetype plugin indent on
+
+" install vim plug
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+call plug#begin()
+
+" List your plugins here
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
