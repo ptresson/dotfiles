@@ -1,10 +1,10 @@
 [window]
 decorations="None"
-opacity=0.8
+opacity=1
 startup_mode="Maximized"
 
-[shell]
-program='tmux'
+# [shell]
+# program='tmux'
 
 [font]
 size = 16
