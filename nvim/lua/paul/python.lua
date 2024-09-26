@@ -30,9 +30,28 @@ function ExecutePython()
 
 end
 
+function ExecuteTests()
+
+		local session=vim.fn.system("echo -n $(tmux display-message -p '#S')")
+		local window=vim.fn.system("echo -n $(tmux display-message -p -F '#{window_index}')")
+		local num_panes=vim.fn.system("echo -n $(tmux display-message -p -F '#{window_panes}')")-1
+		local pane_mode=vim.fn.system("echo -n $(tmux display-message -p -t \""..session..":".. window.."."..num_panes.."\" '#{pane_in_mode}')")
+		if pane_mode == "1" then
+				local clear_screen = "tmux send-keys -t \""..session..":".. window.."."..num_panes.."\" 'q' Enter"
+				vim.fn.system(clear_screen)
+		end
+
+		local command_call = "tmux send-keys -t \""..session..":".. window.."."..num_panes.."\" 'pytest tests/'".." Enter"
+        vim.cmd(":w")
+		vim.fn.system(command_call)
+
+end
+
 vim.keymap.set("n","<F9>", ":lua ExecutePython()<CR>",{silent=true})
 vim.keymap.set("n","<C-CR>", ":lua ExecutePython()<CR>",{silent=true})
 vim.keymap.set("n","<leader><CR>", ":lua ExecutePython()<CR>",{silent=true})
+
+vim.keymap.set("n","<F10>", ":lua ExecuteTests()<CR>",{silent=true})
 
 vim.keymap.set("n","<leader>s", "osys.exit(1)<Esc>k")
 vim.keymap.set("n","<leader>P", "yiwoprint(<Esc>pa)<Esc>")
