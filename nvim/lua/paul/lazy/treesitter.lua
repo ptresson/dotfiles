@@ -11,10 +11,10 @@ return {
     end
 
 },
-    {"nvim-treesitter/nvim-treesitter-context",
-    config = function()
-        require('treesitter-context').setup({
-        vim.keymap.set('n', '<leader>ct', function()require('treesitter-context').toggle()end, {})
-        })
-    end}
+    -- {"nvim-treesitter/nvim-treesitter-context",
+    -- config = function()
+    --     require('treesitter-context').setup({
+    --     vim.keymap.set('n', '<leader>ct', function()require('treesitter-context').toggle()end, {})
+    --     })
+    -- end}
 }
