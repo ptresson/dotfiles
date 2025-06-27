@@ -105,7 +105,9 @@ vim.keymap.set("n","<leader>pp", "oprint('pouet')<Esc>k")
 -- command to add newline after commas and autoindent
 -- see https://vim.fandom.com/wiki/Add_a_newline_after_given_patterns
 -- extra backward slashes add to avoid escape sequences in lua
-vim.keymap.set("n","<leader>,", ":s/\\((\\zs\\|, *\\zs\\|)\\)/\\r&/g|:'[,']normal ==<CR>")
+-- vim.keymap.set("n","<leader>,", ":s/\\((\\zs\\|, *\\zs\\|)\\)/\\r&/g|:'[,']normal ==<CR>")
+vim.keymap.set("n", "<leader>,", ":s/\\((\\zs\\|, *\\zs\\|)\\)/\\r&/g|:'[,']normal ==<CR>:nohl<CR>") -- add nohl at the end
+
 
 
 -- Create a key mapping to find and jump to __main__ 
