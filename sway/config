@@ -239,6 +239,11 @@ bindsym Print exec shotman --capture region
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
 client.focused #057875 #057875 #ffffff #2e9ef4 #057875
 
+#No titlebars
+#
+hide_edge_borders --i3 smart_no_gaps
+default_border pixel 2
+
 #
 # Status Bar:
 #
@@ -259,3 +264,5 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+
