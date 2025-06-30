@@ -39,6 +39,14 @@ output * bg /home/tresson/defaults/Pictures/Wallpapers/g8odq3ziyggc1.jpeg fill
 # bindsym $mod+Ctrl+1 focus output eDP-1
 # bindsym $mod+Ctrl+2 focus output DP-3
 
+set {
+    $laptop  eDP-1
+    $monitor DP-3
+    }
+
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
 
 ### Idle configuration
 #
