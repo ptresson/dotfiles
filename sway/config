@@ -225,6 +225,15 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+
+### app specific
+
+bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+t exec thunderbird
+bindsym $mod+Shift+s exec spotify
+bindsym $mod+Shift+g exec qgis
+bindsym $mod+Shift+n exec nautilus
+bindsym Print exec shotman --capture region
 #
 # Status Bar:
 #
