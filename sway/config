@@ -262,6 +262,7 @@ assign [app_id="chromium"] workspace number 2
 assign [app_id="spotify"] workspace number 3
 
 for_window [app_id="org.gnome.Calculator"] floating enable
+for_window [app_id="pavucontrol"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_role="dialog"] floating enable
 
