@@ -234,6 +234,13 @@ bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+g exec qgis
 bindsym $mod+Shift+n exec nautilus
 bindsym Print exec shotman --capture region
+### colors
+
+# client.<class> <border> <background> <text>
+## defaults
+# client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
+client.focused #057875 #057875 #ffffff #2e9ef4 #057875
+
 #
 # Status Bar:
 #
@@ -249,6 +256,7 @@ bar {
         statusline #ffffff
         background #323232
         inactive_workspace #323232 #323232 #5c5c5c
+        focused_workspace #ffffff #057875 #ffffff
     }
 }
 
