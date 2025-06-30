@@ -255,6 +255,12 @@ bindsym $mod+Ctrl+Up     exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
 bindsym $mod+Ctrl+Left   exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 bindsym $mod+Ctrl+Down   exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 bindsym $mod+Ctrl+m      exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym $mod+Ctrl+space exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioStop exec playerctl stop
 
 ### colors
 
