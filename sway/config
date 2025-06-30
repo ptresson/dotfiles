@@ -231,7 +231,23 @@ bindsym $mod+Shift+t exec thunderbird
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+g exec qgis
 bindsym $mod+Shift+n exec nautilus
+bindsym $mod+Shift+k exec krita
 bindsym Print exec shotman --capture region
+# for_window [app_id="nautilus"] border none
+assign [app_id="firefox"] workspace number 1
+assign [app_id="thunderbird"] workspace number 2
+assign [app_id="chromium"] workspace number 2
+assign [app_id="spotify"] workspace number 3
+
+for_window [app_id="org.gnome.Calculator"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_role="dialog"] floating enable
+
+### startup
+exec swaymsg "exec firefox"
+exec swaymsg "exec thunderbird; exec chromium"
+exec swaymsg "exec spotify"
+
 ### colors
 
 # client.<class> <border> <background> <text>
