@@ -106,10 +106,9 @@ input "type:keyboard" {
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
     bindsym $mod+Shift+Escape exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-    bindsym $mod+l exec swaylock -f -c 000000 \
-         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    bindsym $mod+Escape exec swaylock -f -c 000000 \
-         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    # bindsym $mod+Escape exec swaylock -f -c 000000
+    bindsym $mod+Escape exec swaylock -f -c 000000
+    bindsym $mod+l exec swaylock -f -c 000000
 #
 # Moving around:
 #
@@ -247,6 +246,15 @@ for_window [window_role="dialog"] floating enable
 exec swaymsg "exec firefox"
 exec swaymsg "exec thunderbird; exec chromium"
 exec swaymsg "exec spotify"
+
+
+### audio
+
+bindsym $mod+Ctrl+Right  exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+bindsym $mod+Ctrl+Up     exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+bindsym $mod+Ctrl+Left   exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+bindsym $mod+Ctrl+Down   exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+bindsym $mod+Ctrl+m      exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
 ### colors
 
