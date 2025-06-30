@@ -68,6 +68,7 @@ exec swayidle -w \
 # Read `man 5 sway-input` for more information about this section.
 input "type:keyboard" {
     xkb_layout fr
+        xkb_options "caps:escape_shifted_capslock"
     # xkb_variant ,nodeadkeys
     # xkb_options grp:alt_shift_toggle
 }
