@@ -268,8 +268,8 @@ for_window [window_role="dialog"] floating enable
 
 ### startup
 exec swaymsg "exec firefox"
-exec swaymsg "exec thunderbird; exec chromium"
-exec swaymsg "exec spotify"
+exec swaymsg "exec thunderbird; exec chromium; layout tabbed"
+# exec swaymsg "exec spotify"
 
 
 ### audio
