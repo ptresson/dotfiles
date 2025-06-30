@@ -149,6 +149,9 @@ input "type:keyboard" {
     bindsym $mod+Shift+ccedilla move container to workspace 9
     bindsym $mod+Shift+agrave move container to workspace 10
 
+    ## open new WS
+    bindsym $mod+n exec sway-new-workspace open
+
     # bindsym $mod+Tab workspace prev
     # bindsym $mod+PageUp workspace prev
     bindsym $mod+Tab workspace back_and_forth
@@ -279,19 +282,23 @@ default_border pixel 2
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #323232 #323232 #5c5c5c
-        focused_workspace #ffffff #057875 #ffffff
-    }
+swaybar_command waybar
 }
+# bar {
+#     position top
+
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+#     status_command while ~/.config/sway/status.sh; do sleep 1; done
+
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #323232 #323232 #5c5c5c
+#         focused_workspace #ffffff #057875 #ffffff
+#     }
+# }
 
 include /etc/sway/config.d/*
 
