@@ -254,6 +254,8 @@ bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+g exec qgis
 bindsym $mod+Shift+n exec nautilus
 bindsym $mod+Shift+k exec krita
+## get signal working across platforms
+bindsym $mod+Shift+i exec signal-desktop --password-store="gnome-libsecret"
 bindsym Print exec shotman --capture region
 # for_window [app_id="nautilus"] border none
 assign [app_id="firefox"] workspace number 1
@@ -273,6 +275,11 @@ exec swaymsg "exec thunderbird; exec chromium; layout tabbed"
 
 
 ### audio
+
+
+###  XF86AudioRaiseVolume are not recognized.
+### check evtest (run with sudo) to find input codes
+### remap with xkb ?
 
 bindsym $mod+Ctrl+Right  exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
 bindsym $mod+Ctrl+Up     exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
