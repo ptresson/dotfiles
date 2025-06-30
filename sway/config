@@ -8,6 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -89,6 +90,7 @@ input "type:keyboard" {
 
     # Kill focused window
     bindsym $mod+Shift+q kill
+    bindsym Ctrl+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
