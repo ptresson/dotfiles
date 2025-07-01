@@ -23,6 +23,7 @@ set $maincol #057875
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ## cf. https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/
 set $menu dmenu_path | dmenu_run_history -fn "monospace-14" -sb "$maincol" | xargs swaymsg exec --
+set $poweroff echo "poweroff\nreboot\nsuspend" | dmenu -fn "monospace-14" -sb "$maincol" | xargs systemctl
 
 include /etc/sway/config-vars.d/*
 
@@ -106,11 +107,13 @@ input "type:keyboard" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-    bindsym $mod+Shift+Escape exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # bindsym $mod+Shift+Escape exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e        exec $poweroff
+    bindsym $mod+Shift+Escape   exec $poweroff
     # bindsym $mod+Escape exec swaylock -f -c 000000
-    bindsym $mod+Escape exec swaylock -f -c 000000
-    bindsym $mod+l exec swaylock -f -c 000000
+    bindsym $mod+Escape         exec swaylock -f -c 000000
+    bindsym $mod+l              exec swaylock -f -c 000000
 
     #
 # exit mode
