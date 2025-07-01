@@ -16,7 +16,6 @@
         "sway/window"
     ],
     "modules-right": [
-        // "mpd",
         "idle_inhibitor",
         "pulseaudio",
         "network",
@@ -24,15 +23,9 @@
         "cpu",
         "memory",
         "temperature",
-        "backlight",
         "keyboard-state",
-        // "sway/language",
         "battery",
-        // "battery#bat2",
-        // "clock",
         "clock"
-        // "tray",
-        // "custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -172,7 +165,8 @@
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
