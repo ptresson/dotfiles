@@ -22,7 +22,7 @@ set $maincol #057875
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ## cf. https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/
-set $menu dmenu_path | dmenu_run_history | xargs swaymsg exec --
+set $menu dmenu_path | dmenu_run_history -fn "monospace-14" -sb "$maincol" | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
@@ -301,6 +301,7 @@ bindsym XF86AudioStop exec playerctl stop
 # client.<class> <border> <background> <text>
 ## defaults
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
+client.focused $maincol $maincol #ffffff #2e9ef4 $maincol
 
 #No titlebars
 #
