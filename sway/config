@@ -16,6 +16,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
+set $maincol #057875
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -300,7 +301,6 @@ bindsym XF86AudioStop exec playerctl stop
 # client.<class> <border> <background> <text>
 ## defaults
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
-client.focused #057875 #057875 #ffffff #2e9ef4 #057875
 
 #No titlebars
 #
