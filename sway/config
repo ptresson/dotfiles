@@ -16,7 +16,8 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
-set $maincol #057875
+# set $maincol #057875
+set $maincol #31748f
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
