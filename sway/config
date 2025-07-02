@@ -279,6 +279,7 @@ for_window [window_role="dialog"] floating enable
 ### startup
 exec swaymsg "exec firefox"
 exec swaymsg "exec thunderbird; exec chromium; layout tabbed"
+exec swaymsg "exec nextcloud --background"
 # exec swaymsg "exec spotify"
 
 
@@ -303,6 +304,7 @@ bindsym XF86AudioStop exec playerctl stop
 
 ### colors
 
+exec swaymsg "exec gammastep"
 # client.<class> <border> <background> <text>
 ## defaults
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
