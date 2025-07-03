@@ -111,12 +111,18 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+    // "cpu": {
+    //     "format": "{usage}% ",
+    //     "tooltip": false
+    // },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "on-click": "kitty -e btop"
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "on-click": "kitty -e btop"
     },
     "temperature": {
         // "thermal-zone": 2,
