@@ -18,15 +18,16 @@
     "modules-right": [
         // "mpd",
         "tray",
-        "idle_inhibitor",
-        "pulseaudio",
-        "network",
-        "power-profiles-daemon",
+        // "idle_inhibitor",
+        // "power-profiles-daemon",
         "cpu",
+        "disk",
         "memory",
-        "temperature",
+        // "temperature",
         "keyboard-state",
+        "pulseaudio",
         "battery",
+        "network",
         "clock"
     ],
     // Modules configuration
