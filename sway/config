@@ -288,17 +288,20 @@ exec mako
 ### check evtest (run with sudo) to find input codes
 ### remap with xkb ?
 
-bindsym $mod+Ctrl+Right  exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
-bindsym $mod+Ctrl+Up     exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
-bindsym $mod+Ctrl+Left   exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
-bindsym $mod+Ctrl+Down   exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
-bindsym $mod+Ctrl+m      exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
+bindsym $mod+Ctrl+Right         exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+bindsym $mod+Ctrl+Up            exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+bindsym $mod+Ctrl+Left          exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+bindsym $mod+Ctrl+Down          exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+bindsym $mod+Ctrl+m             exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym XF86AudioLowerVolume    exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+bindsym XF86AudioRaiseVolume    exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+bindsym XF86AudioMute           exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym XF86AudioPlay   exec playerctl play-pause
+bindsym XF86AudioPause  exec playerctl play-pause
 bindsym $mod+Ctrl+space exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioNext   exec playerctl next
+bindsym XF86AudioPrev   exec playerctl previous
+bindsym XF86AudioStop   exec playerctl stop
 
 
 ## brightness
