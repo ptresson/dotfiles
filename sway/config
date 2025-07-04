@@ -261,7 +261,7 @@ bindsym Print exec shotman --capture region
 # for_window [app_id="nautilus"] border none
 assign [app_id="firefox"] workspace number 1
 assign [app_id="thunderbird"] workspace number 2
-assign [app_id="chromium"] workspace number 2
+assign [class="Chromium"] workspace number 2
 assign [app_id="spotify"] workspace number 3
 assign [title="Spotify*"] workspace number 3
 
