@@ -1,0 +1,7 @@
+default-timeout=5000
+background-color=#000000
+border-color=#31748f
+
+[urgency=high]
+border-color=#bf616a
+default-timeout=0

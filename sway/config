@@ -276,6 +276,8 @@ for_window [window_role="dialog"] floating enable
 exec swaymsg "exec firefox"
 exec swaymsg "exec thunderbird; exec chromium; layout tabbed"
 exec swaymsg "exec nextcloud --background"
+## handle notifications with mako
+exec mako
 # exec swaymsg "exec spotify"
 
 
