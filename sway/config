@@ -17,7 +17,8 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # set $maincol #057875
-set $maincol #31748f
+# set $maincol #31748f
+set $maincol #ffffff
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -320,7 +321,7 @@ client.focused $maincol $maincol #ffffff #2e9ef4 $maincol
 #No titlebars
 #
 hide_edge_borders --i3 smart_no_gaps
-default_border pixel 2
+default_border pixel 1
 
 #
 # Status Bar:
