@@ -61,10 +61,8 @@ exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+
+### cf. https://www.reddit.com/r/swaywm/comments/gjwr1p/is_it_possible_to_have_the_screen_turn_off_after/
 
 ### Input configuration
 #
@@ -314,6 +312,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 ### colors
 
+### normal = 6500K
 exec swaymsg "exec gammastep"
 # client.<class> <border> <background> <text>
 ## defaults
