@@ -25,8 +25,8 @@ set $maincol #ffffff
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ## cf. https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/
-set $menu dmenu_path | dmenu_run_history -fn "monospace-14" -sb "$maincol" | xargs swaymsg exec --
-set $poweroff echo "poweroff\nreboot\nsuspend" | dmenu -fn "monospace-14" -sb "$maincol" | xargs systemctl
+set $menu dmenu_path | dmenu_run_history -fn "monospace-14" -sb "$maincol" -sf "#000000" | xargs swaymsg exec --
+set $poweroff echo "poweroff\nreboot\nsuspend\nhibernate" | dmenu -fn "monospace-14" -sb "$maincol" -sf "#000000"| xargs systemctl
 
 include /etc/sway/config-vars.d/*
 
