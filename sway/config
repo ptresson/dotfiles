@@ -317,7 +317,8 @@ exec swaymsg "exec gammastep"
 # client.<class> <border> <background> <text>
 ## defaults
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
-client.focused $maincol $maincol #ffffff #2e9ef4 $maincol
+# client.focused $maincol $maincol #ffffff #2e9ef4 $maincol
+client.focused $maincol $maincol #000000 #2e9ef4 $maincol
 
 #No titlebars
 #
