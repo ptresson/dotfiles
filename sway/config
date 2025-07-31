@@ -179,6 +179,11 @@ input "type:keyboard" {
     # bindsym $mod+PageUp workspace prev
     bindsym $mod+Tab workspace back_and_forth
 
+    # cf. https://github.com/nzig/sway-new-workspace
+    bindsym $mod+End exec ~/.cargo/bin/sway-new-workspace open;
+    bindsym $mod+Shift+End exec ~/.cargo/bin/sway-new-workspace move;
+    bindsym $mod+Shift+d exec ~/.cargo/bin/sway-new-workspace open; exec $menu
+
     # Move to next wordspace
     bindsym Alt+Shift+Tab   workspace prev
     bindsym Alt+Tab         workspace next
