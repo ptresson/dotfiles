@@ -30,8 +30,9 @@
         "cava",
         "pulseaudio",
         "battery",
-        "network",
-        "clock"
+        "network"
+        // "network",
+        // "clock"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -113,7 +114,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%d/%m/%y  -  %H:%M}"
     },
     // "cpu": {
     //     "format": "{usage}% ",
@@ -152,7 +154,7 @@
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-plugged": "",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -175,7 +177,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "ethernet",
+        "format-ethernet": "󰛳 ",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -204,8 +206,9 @@
     },
     "disk": {
         "interval": 30,
-        "format": "{percentage_used}% {path}",
-        "path": "/",
+        // "format": "{percentage_used}% {path}",
+        "format": "{percentage_used}% ",
+        // "path": "/",
         "on-click": "baobab"
     },
     "cava": {
