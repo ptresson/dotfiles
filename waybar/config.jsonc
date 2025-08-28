@@ -116,7 +116,7 @@
         "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
         "format-alt": "{:%H:%M:%S}",
-        "format": "{:%d / %m / %y  -  %H:%M}"
+        "format": "{:%d/%m/%y - %H:%M}"
     },
     // "cpu": {
     //     "format": "{usage}% ",
@@ -201,7 +201,8 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", "", "", ""]
+            // "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
     },
