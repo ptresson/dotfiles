@@ -113,9 +113,10 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-        "format": "{:%d/%m/%y  -  %H:%M}"
+        "format-alt": "{:%H:%M:%S}",
+        "format": "{:%d / %m / %y  -  %H:%M}"
     },
     // "cpu": {
     //     "format": "{usage}% ",
