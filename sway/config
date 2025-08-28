@@ -32,9 +32,9 @@ include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/tresson/defaults/Pictures/Wallpapers/g8odq3ziyggc1.jpeg fill
+### take random wallpaper from given dir
+set $wallpapers_path $HOME/defaults/Pictures/Wallpapers/fract/
+output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 #
 # Example configuration:
 #
@@ -330,7 +330,8 @@ client.focused $maincol $maincol #000000 #2e9ef4 $maincol
 
 #No titlebars
 #
-hide_edge_borders --i3 smart_no_gaps
+# hide_edge_borders --i3 smart_no_gaps
+hide_edge_borders smart
 default_border pixel 1
 
 #
