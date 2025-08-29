@@ -259,8 +259,10 @@ bindsym $mod+Shift+t exec thunderbird
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+g exec qgis
 bindsym $mod+Shift+n exec nautilus
-bindsym $mod+Shift+k exec krita
+bindsym $mod+Shift+k exec keepassxc
 bindsym $mod+k exec keepassxc
+bindsym $mod+Shift+z exec zathura
+bindsym $mod+z exec zathura
 ## get signal working across platforms
 bindsym $mod+Shift+i exec signal-desktop --password-store="gnome-libsecret"
 bindsym Print exec shotman --capture region
