@@ -281,7 +281,7 @@ for_window [app_id="thunderbird" title="^Reminder$"] floating enable
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_role="dialog"] floating enable
-for_window [title="Spotify*"] opacity 0.9
+for_window [title="Spotify*"] opacity 0.7
 
 ### startup
 exec swaymsg "exec firefox"
@@ -328,12 +328,13 @@ exec swaymsg "exec gammastep"
 ## defaults
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
 # client.focused $maincol $maincol #ffffff #2e9ef4 $maincol
-client.focused $maincol $maincol #000000 #2e9ef4 $maincol
+# client.focused $maincol $maincol #000000 #2e9ef4 $maincol
+client.focused $maincol $maincol #000000 $maincol $maincol
 
 #No titlebars
 #
 # hide_edge_borders --i3 smart_no_gaps
-hide_edge_borders smart
+# hide_edge_borders smart
 default_border pixel 1
 
 #
