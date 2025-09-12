@@ -283,6 +283,7 @@ for_window [app_id="eog"] floating enable
 for_window [title="ImageMagick*"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_role="dialog"] floating enable
+for_window [class="Matplotlib"] floating enable
 
 for_window [title="Spotify*"] opacity 0.7
 
