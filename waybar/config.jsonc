@@ -115,7 +115,7 @@
         // "timezone": "America/New_York",
         "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
-        "format-alt": "{:%H:%M:%S}",
+        "format-alt": "{:%y%m%d - %H:%M:%S}",
         "format": "{:%d/%m/%y - %H:%M}"
     },
     // "cpu": {
