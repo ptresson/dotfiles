@@ -89,7 +89,7 @@ input "type:keyboard" {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
-    bindsym $mod+Shift+Return exec $HOME/.config/sway/scripts/new_terminal.sh
+    # bindsym $mod+Shift+Return exec $HOME/.config/sway/scripts/new_terminal.sh
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -277,7 +277,7 @@ bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+t exec thunderbird
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+g exec gimp
-bindsym $mod+Shift+n exec nautilus
+bindsym $mod+Shift+Return exec nautilus
 bindsym $mod+Shift+k exec keepassxc
 bindsym $mod+k exec keepassxc
 bindsym $mod+Shift+z exec zathura
