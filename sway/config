@@ -191,6 +191,8 @@ input "type:keyboard" {
     bindsym Alt+Tab         workspace next
     bindsym $mod+Prior      workspace prev
     bindsym $mod+Next       workspace next
+    bindsym $mod+j          workspace prev
+    bindsym $mod+k          workspace next
 #
 # Layout stuff:
 #
