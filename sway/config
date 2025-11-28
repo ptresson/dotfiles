@@ -44,10 +44,14 @@ output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 # bindsym $mod+Ctrl+1 focus output eDP-1
 # bindsym $mod+Ctrl+2 focus output DP-3
 
+
 set {
     $laptop  eDP-1
     $monitor DP-3
     }
+
+output $laptop position 0,0
+output $monitor position 1920,0
 
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
