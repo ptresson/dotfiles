@@ -372,7 +372,9 @@ default_border pixel 1
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 swaybar_command waybar
+modifier Mod4
 }
+bindsym $mod+shift+b        exec swaymsg bar mode toggle
 # bar {
 #     position top
 
