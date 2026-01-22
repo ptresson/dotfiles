@@ -286,6 +286,7 @@ bindsym $mod+Ctrl+p mode "present"
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+t exec thunderbird
 bindsym $mod+Shift+s exec spotify
+bindsym $mod+Shift+a exec gnome-calculator
 bindsym $mod+Shift+g exec gimp
 bindsym $mod+Shift+Return exec nautilus
 bindsym $mod+Shift+k exec keepassxc
