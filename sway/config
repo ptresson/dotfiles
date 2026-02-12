@@ -398,4 +398,5 @@ bindsym $mod+shift+b        exec swaymsg bar mode toggle
 
 include /etc/sway/config.d/*
 
+### screen sharing fix : https://forum.endeavouros.com/t/unable-to-share-screen-with-sway-wm/46654/5
 
