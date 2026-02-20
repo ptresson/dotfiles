@@ -307,6 +307,7 @@ for_window [app_id="org.gnome.Calculator"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="org.gnome.Nautilus"] floating enable
+for_window [app_id="org.gnome.FileRoller"] floating enable
 for_window [app_id="thunderbird" title="^Reminder$"] floating enable
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [app_id="eog"] floating enable
