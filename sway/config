@@ -193,6 +193,7 @@ input "type:keyboard" {
     bindsym $mod+End exec ~/.cargo/bin/sway-new-workspace open;
     bindsym $mod+Shift+End exec ~/.cargo/bin/sway-new-workspace move;
     bindsym $mod+Shift+d exec ~/.cargo/bin/sway-new-workspace open; exec $menu
+    bindsym $mod+Home workspace 1
 
     # Move to next wordspace
     bindsym Alt+Shift+Tab   workspace prev
