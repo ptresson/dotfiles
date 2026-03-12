@@ -321,7 +321,7 @@ for_window [title="Spotify*"] opacity 0.7
 
 ### startup
 exec swaymsg "exec firefox"
-exec swaymsg "exec thunderbird; exec chromium; layout tabbed"
+exec swaymsg "exec thunderbird; exec chromium; exec gnome-calendar; layout tabbed"
 exec swaymsg "exec nextcloud --background"
 ## handle notifications with mako
 exec mako
