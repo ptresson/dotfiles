@@ -26,7 +26,9 @@ set $maincol #ffffff
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ## cf. https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/
 set $menu dmenu_path | dmenu_run_history -fn "monospace-14" -sb "$maincol" -sf "#000000" | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu_run_history | xargs swaymsg exec --
 set $poweroff echo "poweroff\nreboot\nsuspend" | dmenu -fn "monospace-14" -sb "$maincol" -sf "#000000" | xargs systemctl
+# set $poweroff echo "poweroff\nreboot\nsuspend" | dmenu | xargs systemctl
 
 include /etc/sway/config-vars.d/*
 
@@ -326,6 +328,7 @@ exec swaymsg "exec thunderbird; exec chromium; exec gnome-calendar; layout tabbe
 exec swaymsg "exec nextcloud --background"
 ## handle notifications with mako
 exec mako
+exec swaymsg "exec mpd --daemon && rmpc stop"
 # exec swaymsg "exec spotify"
 
 
@@ -361,6 +364,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 ### normal = 6500K
 exec swaymsg "exec gammastep"
+exec swaymsg "exec darkman run && darkman set dark"
 # client.<class> <border> <background> <text>
 ## defaults
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
@@ -400,6 +404,5 @@ bindsym $mod+shift+b        exec swaymsg bar mode toggle
 # }
 
 include /etc/sway/config.d/*
-
 ### screen sharing fix : https://forum.endeavouros.com/t/unable-to-share-screen-with-sway-wm/46654/5
 
