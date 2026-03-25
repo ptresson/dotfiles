@@ -137,6 +137,7 @@ alias lg="lazygit"
 alias ca="conda activate"
 alias ma="mamba activate"
 alias icat="kitten icat"
+alias gimp3="flatpak run org.gimp.GIMP"
 
 # cf. https://unix.stackexchange.com/questions/6628/what-customizations-have-you-done-on-your-shell-profile-to-increase-productivity
 mcd() {
