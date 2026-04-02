@@ -293,6 +293,7 @@ bindsym $mod+Shift+a exec gnome-calculator
 bindsym $mod+Shift+g exec gimp
 bindsym $mod+Shift+Return exec nautilus
 bindsym $mod+Shift+k exec keepassxc
+bindsym $mod+Shift+v exec vlc
 # bindsym $mod+k exec keepassxc
 bindsym $mod+Shift+z exec zathura
 bindsym $mod+z exec zathura
