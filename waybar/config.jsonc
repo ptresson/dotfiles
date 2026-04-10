@@ -28,7 +28,7 @@
         "memory",
         // "temperature",
         "cava",
-        "mpd",
+        // "mpd",
         "pulseaudio",
         "battery",
         "network"
@@ -108,10 +108,14 @@
     "tray": {
         // "icon-size": 21,
         "spacing": 10,
-        // "icons": {
+        "icons": {
         //   "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
+        // "vlc":"$HOME/.local/share/icons/vlc.png"
+        // idk how vlc is called, default icons are in /usr/share/icons/hicolor/16x16/
+        // old vlc icon at vlc.png.bak
+        // idem for Nextcloud_ok
+        }
     },
     "clock": {
         // "timezone": "America/New_York",
