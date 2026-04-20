@@ -316,6 +316,7 @@ for_window [app_id="thunderbird" title="^Reminder$"] floating enable
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
 for_window [app_id="eog"] floating enable
 for_window [title="ImageMagick*"] floating enable
+for_window [title="feh*"] floating enable
 for_window [title="Enter your password for *"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_role="dialog"] floating enable
