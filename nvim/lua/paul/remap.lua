@@ -14,6 +14,8 @@ vim.keymap.set('n','<leader>E', vim.diagnostic.goto_prev)
 vim.keymap.set('n','<leader>e', vim.diagnostic.goto_next)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
+vim.keymap.set('n', '€', 'viw"-y:%s/<C-r>-/<C-r>-/g<Left><Left>')
+vim.keymap.set('v', '€', '"-y:%s/<C-r>-/<C-r>-/g<Left><Left>')
 
 ---- greatest remap ever
 --vim.keymap.set("x", "<leader>p", [["_dP]])
