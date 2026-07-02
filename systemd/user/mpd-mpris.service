@@ -1,0 +1,11 @@
+[Unit]
+Description=MPD MPRIF bridge
+After=mpd.service
+Requires=mpd.service
+
+[Service]
+ExecStart=%h/go/bin/mpd-mpris
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
