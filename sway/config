@@ -314,6 +314,7 @@ for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="org.gnome.FileRoller"] floating enable
 for_window [app_id="thunderbird" title="^Reminder$"] floating enable
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
+for_window [app_id="kitty"] floating enable
 for_window [app_id="eog"] floating enable
 for_window [title="ImageMagick*"] floating enable
 for_window [title="feh*"] floating enable
@@ -330,8 +331,10 @@ exec swaymsg "exec thunderbird; exec chromium; exec gnome-calendar; layout tabbe
 exec swaymsg "exec nextcloud --background"
 ## handle notifications with mako
 exec mako
-exec swaymsg "exec mpd --daemon && rmpc stop"
-# exec swaymsg "exec spotify"
+# exec swaymsg "exec mpd --daemon && rmpc stop"
+### mpd and mpd-mpris are now enabled on boot after
+## systemctl --user --now enable mpd.service
+## systemctl --user --now enable mpd-mpris
 
 
 ### audio
