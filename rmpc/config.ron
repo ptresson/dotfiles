@@ -22,7 +22,7 @@
     browser_song_sort: [Disc, Track, Artist, Title],
     directories_sort: SortFormat(group_by_type: true, reverse: false),
     album_art: (
-        method: None,
+        method: Auto,
         max_size_px: (width: 0, height: 0),
         disabled_protocols: ["http://", "https://"],
         vertical_align: Center,
@@ -150,6 +150,13 @@
         album_date_tags: [Date],
     ),
     tabs: [
+            (
+            name: "Playing",
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "65%", pane: Pane(Cava)), (size: "35%", pane: Pane(AlbumArt))],
+            ),
+        ),
         (
             name: "Queue",
             pane: Split(
@@ -163,10 +170,6 @@
         (
             name: "Directories",
             pane: Pane(Directories),
-        ),
-        (
-            name: "Artists",
-            pane: Pane(Artists),
         ),
         (
             name: "Album Artists",
