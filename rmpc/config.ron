@@ -159,13 +159,7 @@
         ),
         (
             name: "Queue",
-            pane: Split(
-                direction: Vertical,
-                panes: [
-                (size: "50%", pane: Pane(Queue)),
-                (size: "50%", pane: Pane(Cava)),
-                ],
-                ),
+            pane: Pane(Queue),
         ),
         (
             name: "Directories",
