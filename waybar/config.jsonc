@@ -75,7 +75,7 @@
         // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} {volume}%",
         "format": "{stateIcon}",
         "format-disconnected": "",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "⏹",
         "unknown-tag": "",
         "interval": 5,
         "consume-icons": {
