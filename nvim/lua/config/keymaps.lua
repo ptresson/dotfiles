@@ -1,4 +1,6 @@
 vim.g.mapleader = " "
+
+-- see https://github.com/neovim/neovim/issues/40684 maybe if issues of redundant CR ?
 vim.keymap.set("n", "<CR>", ":")
 vim.keymap.set("n","<S-CR>","o<Esc>k")
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -16,10 +18,3 @@ vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 vim.keymap.set('n', '€', 'viw"-y:%s/<C-r>-/<C-r>-/g<Left><Left>')
 vim.keymap.set('v', '€', '"-y:%s/<C-r>-/<C-r>-/g<Left><Left>')
-
----- greatest remap ever
---vim.keymap.set("x", "<leader>p", [["_dP]])
---
----- next greatest remap ever : asbjornHaland
---vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
---vim.keymap.set("n", "<leader>Y", [["+Y]])

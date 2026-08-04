@@ -1,0 +1,5 @@
+require("config.options")
+require("config.keymaps")
+require("config.git")
+require("config.color")
+require("config.lsp")
