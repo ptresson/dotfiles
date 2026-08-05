@@ -8,7 +8,7 @@ require('lualine').setup {
                 section_separators = { left = '', right = ''},
             },
             sections = {
-                lualine_b = {{'branch', icons_enabled = false}},
+                lualine_b = {{'branch', icons_enabled = false}, 'diff'},
                 lualine_c = {{'filename', path=1}},
                 lualine_x = {},
                 lualine_y = {}
