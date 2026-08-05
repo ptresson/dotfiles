@@ -27,6 +27,6 @@ vim.api.nvim_create_autocmd("PackChanged", {
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { '*' },
+  pattern = { 'python' },
   callback = function() vim.treesitter.start() end,
 })
