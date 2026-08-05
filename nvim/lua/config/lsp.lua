@@ -29,12 +29,13 @@ vim.diagnostic.config({
     source = 'if_many',
   },
   underline = true,
-  -- virtual_text = {
-  --   spacing = 4,
-  --   source = 'if_many',
-  --   prefix = '',
-  --   transparent_bg = true,
-  -- },
+  virtual_text = {
+    spacing = 4,
+    source = 'if_many',
+    prefix = '',
+    transparent_bg = true,
+    severity = vim.diagnostic.severity.ERROR
+  },
   -- signs = {
   --   text = {
   --     [vim.diagnostic.severity.ERROR] = 'E',
@@ -46,7 +47,6 @@ vim.diagnostic.config({
 })
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', {underline = false, undercurl = false})
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', {underline = false, undercurl = false})
--- vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', {bg = "none"})
 -- vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextInfo', {bg = "none"})
 -- vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarn', {bg = "none"})
 -- vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextError', {bg = "none"})
