@@ -15,8 +15,8 @@ set $mod Mod4
 # set $left h
 # set $right l
 # Your preferred terminal emulator
-# set $term kitty
-set $term alacritty
+set $term kitty
+# set $term alacritty
 # set $maincol #057875
 # set $maincol #31748f
 set $maincol #ffffff
@@ -314,7 +314,8 @@ for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="org.gnome.FileRoller"] floating enable
 for_window [app_id="thunderbird" title="^Reminder$"] floating enable
 for_window [app_id="org.keepassxc.KeePassXC"] floating enable
-for_window [app_id="kitty"] floating enable
+# for_window [app_id="kitty"] floating enable
+for_window [title="rmpc"] floating enable
 for_window [app_id="eog"] floating enable
 for_window [title="ImageMagick*"] floating enable
 for_window [title="feh*"] floating enable
