@@ -37,6 +37,12 @@ include /etc/sway/config-vars.d/*
 ### take random wallpaper from given dir
 set $wallpapers_path $HOME/defaults/Pictures/Wallpapers/fract/
 output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
+
+
+### for pywall16
+# include "$HOME/.cache/wal/colors-sway"
+# output "*" bg $wallpaper fill
+
 #
 # Example configuration:
 #
