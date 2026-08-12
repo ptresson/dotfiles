@@ -1,7 +1,13 @@
-vim.pack.add({ 'https://github.com/rose-pine/neovim' })
-vim.pack.add({ {src='https://github.com/RedsXDD/neopywal.nvim', name='neopywal'} })
-require('rose-pine').setup({disable_background = true})
-vim.cmd("colorscheme rose-pine")
+-- vim.pack.add({ 'https://github.com/rose-pine/neovim' })
+-- vim.pack.add({ {src='https://github.com/RedsXDD/neopywal.nvim', name='neopywal'} })
+-- vim.pack.add({ {src='https://github.com/WTFox/luna.nvim', name='luna'} })
+-- require('luna').setup({transparent = true})
+-- vim.cmd("colorscheme luna")
+vim.pack.add({ {src='https://github.com/Aejkatappaja/cendre', name='cendre'} })
+require('cendre').setup({transparent = true})
+vim.cmd("colorscheme cendre")
+-- require('rose-pine').setup({disable_background = true})
+-- vim.cmd("colorscheme rose-pine")
 
 
 -- require('neopywal').setup({transparent_background = true})
