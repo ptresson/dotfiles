@@ -7,18 +7,5 @@ local gitsigns = require('gitsigns')
 vim.keymap.set('n', '<leader>hs', gitsigns.stage_hunk)
 vim.keymap.set('n', '<leader>hr', gitsigns.reset_hunk)
 
-vim.keymap.set('n', '<leader>hn', function()
-  if vim.wo.diff then
-    vim.cmd.normal({']c', bang = true})
-  else
-    gitsigns.nav_hunk('next')
-  end
-end)
-
-vim.keymap.set('n', '<leader>hp', function()
-  if vim.wo.diff then
-    vim.cmd.normal({'[c', bang = true})
-  else
-    gitsigns.nav_hunk('prev')
-  end
-end)
+vim.keymap.set('n', '<leader>hn', function()gitsigns.nav_hunk('next')end)
+vim.keymap.set('n', '<leader>hp', function()gitsigns.nav_hunk('prev')end)
