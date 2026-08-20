@@ -12,6 +12,43 @@
 -- tmux_window = tmux_command("display-message -p -F '#{window_index}'")
 -- tmux_num_panes = tmux_command("display-message -p -F '#{window_panes}'")
 
+
+function ExecuteFT()
+
+    local session=vim.fn.system("echo -n $(tmux display-message -p '#S')")
+    local window=vim.fn.system("echo -n $(tmux display-message -p -F '#{window_index}')")
+    local num_panes=vim.fn.system("echo -n $(tmux display-message -p -F '#{window_panes}')")-1
+    local pane_mode=vim.fn.system("echo -n $(tmux display-message -p -t \""..session..":".. window.."."..num_panes.."\" '#{pane_in_mode}')")
+
+    if pane_mode == "1" then
+        local clear_screen = "tmux send-keys -t \""..session..":".. window.."."..num_panes.."\" 'q' Enter"
+        vim.fn.system(clear_screen)
+    end
+
+    local tmux_command_call = "tmux send-keys -t \""..session..":".. window.."."..num_panes
+
+    local filename = vim.fn.expand('%')
+    local filetype = vim.bo.filetype
+
+    local handlers = {
+        python = function() vim.fn.system(tmux_command_call.."\" 'python '"..filename.." Enter") end,
+        tex = function() vim.fn.system(tmux_command_call.."\" 'latexmk -auxdir=aux/ main.tex && gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=compressed.pdf main.pdf'".." Enter") end,
+        lua = function() vim.cmd("echo 'Lua file detected'") end,
+    }
+
+    local handler = handlers[filetype]
+    if handler then
+        vim.cmd(":w")
+        handler()
+    else
+        vim.cmd(":w")
+        vim.cmd(string.format("echo 'Current filetype: %s not implemented yet'", filetype))
+    end
+
+end
+
+
+
 function ExecutePython()
 
 		local session=vim.fn.system("echo -n $(tmux display-message -p '#S')")
@@ -132,7 +169,8 @@ function CompileLaTeX()
 end
 
 vim.keymap.set("n","<F9>", ":lua ExecutePython()<CR>",{silent=true})
-vim.keymap.set("n","<C-CR>", ":lua ExecutePython()<CR>",{silent=true})
+-- vim.keymap.set("n","<C-CR>", ":lua ExecutePython()<CR>",{silent=true})
+vim.keymap.set("n","<C-CR>", ":lua ExecuteFT()<CR>",{silent=true})
 vim.keymap.set("n","<leader><CR>", ":lua ExecutePython()<CR>",{silent=true})
 
 vim.keymap.set("n","<F10>", ":lua ExecuteTests()<CR>",{silent=true})
