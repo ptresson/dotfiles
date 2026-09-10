@@ -1,5 +1,6 @@
 set highlight-color "#31748f"
-set recolor-lightcolor "#1c1925"
+set recolor-lightcolor "#171311"
+set recolor-darkcolor "#e6d5c2"
 set inputbar-fg "#ffffff"
 
 set selection-clipboard clipboard
