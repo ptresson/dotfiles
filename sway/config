@@ -25,9 +25,13 @@ set $maincol #ffffff
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ## cf. https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/
-set $menu dmenu_path | dmenu_run_history -fn "monospace-14" -sb "$maincol" -sf "#000000" | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu_run_history -fn "monospace-14" -sb "$maincol" -sf "#000000" | xargs swaymsg exec --
+set $menu dmenu_path | wmenu_run_history -f \"monospace 13\" -n "$maincol" -N "#000000" -S "#fcba81" -s "#000000" | xargs swaymsg exec --
+# set $menu dmenu_path | wmenu | xargs swaymsg exec -- 
+# set $menu wmenu-run
 # set $menu dmenu_path | dmenu_run_history | xargs swaymsg exec --
-set $poweroff echo "poweroff\nreboot\nsuspend" | dmenu -fn "monospace-14" -sb "$maincol" -sf "#000000" | xargs systemctl
+set $poweroff echo "poweroff\nreboot\nsuspend" | wmenu -f \"monospace 13\" -n "$maincol" -N "#000000" -S "#505050" | xargs systemctl
+# set $poweroff echo "poweroff\nreboot\nsuspend" | dmenu -fn "monospace-14" -sb "$maincol" -sf "#000000" | xargs systemctl
 # set $poweroff echo "poweroff\nreboot\nsuspend" | dmenu | xargs systemctl
 
 include /etc/sway/config-vars.d/*
