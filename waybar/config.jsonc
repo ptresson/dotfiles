@@ -112,7 +112,6 @@
         // "icon-size": 21,
         "spacing": 10,
         "icons": {
-            "Nextcloud": "$HOME/.local/share/icons/vlc.png",
           "blueman": "bluetooth",
         }
     },
@@ -121,7 +120,8 @@
         "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
         "format-alt": "{:%y%m%d - %H:%M:%S}",
-        "format": "{:%d/%m/%y - %H:%M}"
+        "format": "{:%d/%m/%y - %H:%M}",
+        "on-click-middle": "gnome-calendar",
     },
     // "cpu": {
     //     "format": "{usage}% ",
