@@ -75,9 +75,9 @@ bindswitch --reload --locked lid:off output $laptop enable
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f -c 500000' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock -f -c 500000'
 
 ### cf. https://www.reddit.com/r/swaywm/comments/gjwr1p/is_it_possible_to_have_the_screen_turn_off_after/
 
@@ -135,9 +135,12 @@ input "type:keyboard" {
     # bindsym $mod+Escape exec swaylock -f -c 000000
     # bindsym $mod+Escape         exec swaylock -f -c 000000
     # bindsym $mod+Shift+l              exec swaylock -f -c 000000
-    bindsym $mod+l              exec swaylock -f -c 000000
+    # bindsym $mod+l              exec swaylock -f -c 000000
 
-# # exit mode
+
+    bindsym $mod+l exec ~/.config/sway/scripts/idle.sh
+
+# exit mode
 # #
 
 # set $exit "exit: [s]leep, [p]oweroff, [r]eboot, [l]ogout"
