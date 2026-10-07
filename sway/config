@@ -374,8 +374,8 @@ bindsym XF86AudioStop   exec playerctl stop
 
 ## brightness
 ## after usermod -aG video ${USER}
-bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 2%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 2%+
 
 ### colors
 
